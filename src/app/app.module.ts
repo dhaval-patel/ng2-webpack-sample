@@ -6,7 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { ApiService } from './shared';
+import { TodoComponent } from './todo/todo.component';
+import { TodoListComponent } from './todolist/todolist.component';
+import { AddTodoComponent } from './addtodo/addtodo.component';
+import { ApiService, TodoService } from './shared';
 import { routing } from './app.routing';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
@@ -21,10 +24,14 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    TodoComponent,
+    TodoListComponent,
+    AddTodoComponent
   ],
   providers: [
-    ApiService
+    ApiService,
+    TodoService
   ],
   bootstrap: [AppComponent]
 })
